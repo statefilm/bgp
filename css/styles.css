@@ -769,7 +769,7 @@ footer {
   .nav-links { display: none; }
 
   #hero { min-height: 100svh; }
-  .hero-content { padding: 0 24px 60px; }
+  .hero-content { padding: 20px 24px; margin: 0 24px 60px; max-width: none; }
   .hero-scroll { display: none; }
 
   #why-film { padding: 60px 24px; }
