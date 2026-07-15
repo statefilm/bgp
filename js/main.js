@@ -85,6 +85,11 @@ if (track) {
   });
 }
 
+// Coming soon gallery tiles
+document.querySelectorAll('.gallery-card.coming-soon').forEach(card => {
+  card.addEventListener('click', e => e.preventDefault());
+});
+
 // Scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

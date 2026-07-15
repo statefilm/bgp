@@ -307,13 +307,42 @@ nav {
 }
 
 .gallery-photo {
+  position: relative;
   width: 100%;
   aspect-ratio: 4/5;
   display: block;
   overflow: hidden;
-  transition: opacity 0.3s ease;
 }
-.gallery-card:hover .gallery-photo { opacity: 0.8; }
+
+.gallery-card.coming-soon { cursor: default; }
+
+.gallery-photo::before,
+.gallery-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.gallery-photo::before {
+  background: rgba(245, 240, 232, 0.8);
+}
+.gallery-photo::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.gallery-card:not(.coming-soon) .gallery-photo::after { content: "View Gallery"; }
+.gallery-card.coming-soon .gallery-photo::after { content: "Coming Soon"; }
+.gallery-card:hover .gallery-photo::before,
+.gallery-card:hover .gallery-photo::after { opacity: 1; }
 
 .gallery-meta {
   padding: 14px 4px 28px;
@@ -331,6 +360,13 @@ nav {
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+.gallery-meta h4::after {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
 }
 
 .fp1 { background: linear-gradient(160deg, #2a1e14 0%, #5a3d28 40%, #3d2918 70%, #1e140a 100%); }
@@ -744,6 +780,16 @@ footer {
 
   #galleries { padding: 60px 24px; }
   .galleries-grid { grid-template-columns: 1fr; gap: 40px; }
+  .gallery-photo::before,
+  .gallery-photo::after { display: none; }
+  .gallery-card:not(.coming-soon) .gallery-meta h4::after {
+    content: " | VIEW GALLERY";
+    color: var(--muted);
+  }
+  .gallery-card.coming-soon .gallery-meta h4::after {
+    content: " | COMING SOON";
+    color: var(--accent);
+  }
 
   #about {
     padding: 60px 24px;
