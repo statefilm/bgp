@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Billy Grubbs | Film Photography Co.</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+<style>
+  .pswp {
+    --pswp-bg: #ebe6de;
+    --pswp-icon-color: #2a2925;
+    --pswp-icon-color-secondary: #ebe6de;
+  }
+  .pswp__counter {
+    color: var(--mid);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  .pswp__button--zoom { display: none !important; }
+  .pswp__button--close,
+  .pswp__button--arrow--prev,
+  .pswp__button--arrow--next {
+    opacity: 0.35;
+    transition: opacity 0.25s;
+  }
+  .pswp__button--close:hover,
+  .pswp__button--arrow--prev:hover,
+  .pswp__button--arrow--next:hover {
+    opacity: 0.8;
+  }
+  .pswp__button--arrow--prev .pswp__icn { transform: scale(0.5); }
+  .pswp__button--arrow--next .pswp__icn { transform: scale(-0.5, 0.5); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo-text">
+    <strong>Billy Grubbs</strong>
+    <span>Film Photography Co.</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#why-film">Why Film</a></li>
+    <li><a href="#galleries">Galleries</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="#why-film" onclick="closeMobileMenu()">Why Film</a>
+  <a href="#galleries" onclick="closeMobileMenu()">Galleries</a>
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#pricing" onclick="closeMobileMenu()">Pricing</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image: url('images/hero/staircase-veil.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('images/hero/portrait.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('images/hero/outdoor-couple.jpg');"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-desc"><span style="font-size:1.75em; font-weight:600; letter-spacing:0.01em; line-height:1;">Billy Grubbs</span> is a professional film photographer specializing in authentic imagery that is defined by character, light, and movement.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-main">Inquire</a>
+      <a href="#galleries" class="btn-link">View Galleries</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-bar"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="portfolio-header reveal">
+    <div class="section-label">Selected Frames</div>
+  </div>
+  <div class="portfolio-slider-wrap">
+    <button class="slider-arrow slider-prev" id="portfolioPrev" aria-label="Previous">&#8592;</button>
+    <div class="portfolio-track" id="portfolioTrack">
+      <div class="portfolio-item"><a href="images/portfolio/p-01.jpg" data-pswp-width="1500" data-pswp-height="1838"><img src="images/portfolio/p-01.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-02.jpg" data-pswp-width="1000" data-pswp-height="1226"><img src="images/portfolio/p-02.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-03.jpg" data-pswp-width="1800" data-pswp-height="1800"><img src="images/portfolio/p-03.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-04.jpg" data-pswp-width="1900" data-pswp-height="1550"><img src="images/portfolio/p-04.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-05.jpg" data-pswp-width="1892" data-pswp-height="2522"><img src="images/portfolio/p-05.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-06.jpg" data-pswp-width="3695" data-pswp-height="2706"><img src="images/portfolio/p-06.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-07.jpg" data-pswp-width="1926" data-pswp-height="2361"><img src="images/portfolio/p-07.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-08.jpg" data-pswp-width="3902" data-pswp-height="3844"><img src="images/portfolio/p-08.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-09.jpg" data-pswp-width="3490" data-pswp-height="3438"><img src="images/portfolio/p-09.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-10.jpg" data-pswp-width="2400" data-pswp-height="2365"><img src="images/portfolio/p-10.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-11.jpg" data-pswp-width="1000" data-pswp-height="668"><img src="images/portfolio/p-11.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-12.jpg" data-pswp-width="3677" data-pswp-height="3000"><img src="images/portfolio/p-12.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-13.jpg" data-pswp-width="1000" data-pswp-height="1508"><img src="images/portfolio/p-13.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-14.jpg" data-pswp-width="3501" data-pswp-height="2856"><img src="images/portfolio/p-14.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-15.jpg" data-pswp-width="3374" data-pswp-height="2753"><img src="images/portfolio/p-15.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-16.jpg" data-pswp-width="1000" data-pswp-height="985"><img src="images/portfolio/p-16.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-17.jpg" data-pswp-width="1000" data-pswp-height="1226"><img src="images/portfolio/p-17.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-18.jpg" data-pswp-width="2706" data-pswp-height="3695"><img src="images/portfolio/p-18.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-19.jpg" data-pswp-width="3490" data-pswp-height="3438"><img src="images/portfolio/p-19.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-20.jpg" data-pswp-width="3000" data-pswp-height="3677"><img src="images/portfolio/p-20.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-21.jpg" data-pswp-width="2400" data-pswp-height="2365"><img src="images/portfolio/p-21.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-22.jpg" data-pswp-width="4524" data-pswp-height="3000"><img src="images/portfolio/p-22.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-23.jpg" data-pswp-width="4524" data-pswp-height="3000"><img src="images/portfolio/p-23.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-24.jpg" data-pswp-width="3088" data-pswp-height="2048"><img src="images/portfolio/p-24.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+      <div class="portfolio-item"><a href="images/portfolio/p-25.jpg" data-pswp-width="2000" data-pswp-height="2000"><img src="images/portfolio/p-25.jpg" alt="Billy Grubbs Film Photography" loading="lazy"></a></div>
+    </div>
+    <button class="slider-arrow slider-next" id="portfolioNext" aria-label="Next">&#8594;</button>
+  </div>
+</section>
+
+<!-- WHY FILM -->
+<section id="why-film">
+  <div class="reveal">
+    <div class="section-label" style="color:var(--accent-light)">Philosophy</div>
+    <h2 class="section-title" style="color:var(--cream)">Why Film?</h2>
+  </div>
+  <div class="why-film-grid reveal">
+    <div>
+      <div class="why-film-photo"></div>
+    </div>
+    <div class="film-reasons">
+      <div class="film-reason">
+        <h4>Focus &amp; Control</h4>
+        <p>My photographs are made with traditional film cameras. Shooting classic, manual cameras allows me slow down and create each photograph with purpose.</p>
+      </div>
+      <div class="film-reason">
+        <h4>Tangible Process</h4>
+        <p>Film photography gives me tangible control of my work. From loading the film to developing it at the lab, the process is hands-on and timeless.</p>
+      </div>
+      <div class="film-reason">
+        <h4>From Negative to Digital</h4>
+        <p>After developing your film, I scan each roll frame-by-frame so that you receive analog images in convenient digital format — ready to print and share with loved ones.</p>
+      </div>
+      <div class="film-reason">
+        <h4>Documentary Approach</h4>
+        <p>My photographs are made honestly while observing relationships and real moments. Your photos will tell a visual story driven by genuine interaction and emotion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERIES -->
+<section id="galleries">
+  <div class="reveal">
+    <div class="section-label">Explore Galleries</div>
+  </div>
+  <div class="galleries-grid reveal">
+    <a href="#" class="gallery-card">
+      <div class="gallery-photo" style="background: url('images/tiles/alex-matt.jpg') center center / cover no-repeat;"></div>
+      <div class="gallery-meta"><h4>Alex &amp; Matt</h4><p>Yokayo Ranch, Ukiah, California</p></div>
+    </a>
+    <a href="#" class="gallery-card">
+      <div class="gallery-photo" style="background: url('images/tiles/colleen-clay.jpg') center center / cover no-repeat;"></div>
+      <div class="gallery-meta"><h4>Colleen &amp; Clay</h4><p>Private Farm, Taylorsville, Kentucky</p></div>
+    </a>
+    <a href="galleries/sarah-dan/" class="gallery-card">
+      <div class="gallery-photo" style="background: url('images/tiles/sarah-dan.jpg') center center / cover no-repeat;"></div>
+      <div class="gallery-meta"><h4>Sarah &amp; Dan</h4><p>Alms Park, Cincinnati, Ohio</p></div>
+    </a>
+    <a href="galleries/kristy-luther/" class="gallery-card">
+      <div class="gallery-photo" style="background: url('images/tiles/kristy-luther.jpg') center center / cover no-repeat;"></div>
+      <div class="gallery-meta"><h4>Kristy &amp; Luther</h4><p>New Albany, Indiana</p></div>
+    </a>
+    <a href="galleries/lindsay-cam/" class="gallery-card">
+      <div class="gallery-photo" style="background: url('images/tiles/lindsay.jpg') center top / cover no-repeat;"></div>
+      <div class="gallery-meta"><h4>Lindsay</h4><p>Louisville, Kentucky</p></div>
+    </a>
+    <a href="galleries/laura-brian/" class="gallery-card">
+      <div class="gallery-photo" style="background: url('images/tiles/laura-brian.jpg') center top / cover no-repeat;"></div>
+      <div class="gallery-meta"><h4>Laura &amp; Brian</h4><p>Gardencourt, Louisville, Kentucky</p></div>
+    </a>
+    <a href="#" class="gallery-card">
+      <div class="gallery-photo" style="background: url('images/tiles/hope-justin.jpg') center center / cover no-repeat;"></div>
+      <div class="gallery-meta"><h4>Hope &amp; Justin</h4><p>Madison, Indiana</p></div>
+    </a>
+    <a href="galleries/tabitha-jeremy/" class="gallery-card">
+      <div class="gallery-photo" style="background: url('images/tiles/tabitha-jeremy.jpg') center center / cover no-repeat;"></div>
+      <div class="gallery-meta"><h4>Tabitha &amp; Jeremy</h4><p>Prospect, Kentucky</p></div>
+    </a>
+    <a href="#" class="gallery-card">
+      <div class="gallery-photo" style="background: url('images/tiles/andrea-nick.jpg') center center / cover no-repeat;"></div>
+      <div class="gallery-meta"><h4>Andrea &amp; Nick</h4><p>Anchorage, Kentucky</p></div>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-text reveal">
+    <div class="section-label" style="color:var(--accent-light);">About</div>
+    <h2 class="section-title" style="color:var(--cream);">The Photographer</h2>
+    <p class="about-body">Billy Grubbs is a Louisville-based documentary photographer specializing in analog film. With over 150 weddings photographed since 2007, Billy brings a quiet, observational presence to every shoot.</p>
+    <p class="about-body">Billy is also the founder of <a href="http://statefilm.co/">State Film Lab</a> in Louisville, developing film for photographers across the nation. This deep connection to the craft shapes every image he makes.</p>
+    <p class="about-body">He is available for weddings, portraits, and commercial work in Kentucky and abroad.</p>
+  </div>
+  <div class="about-photo reveal">
+    <div class="about-photo-main">
+      <img src="images/about/billy.jpg" alt="Billy Grubbs">
+    </div>
+    <div class="about-photo-frame"></div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="pricing-inner">
+    <div class="reveal">
+      <div class="section-label">Investment</div>
+      <h2 class="section-title">Packages + Pricing</h2>
+      <p class="pricing-intro">All packages include high-resolution digital files. Albums and prints are available with complete wedding packages. Please inquire for details and availability.</p>
+    </div>
+    <div class="pricing-items reveal">
+      <div class="pricing-item">
+        <div class="pricing-name">Wedding Coverage</div>
+        <div class="pricing-divider"></div>
+        <p class="pricing-desc">Hourly coverage by Billy Grubbs. Complete packages include a handcrafted album or custom prints, plus an online gallery. Additional photographer and travel options are available.</p>
+        <div class="pricing-range">$2,750 – $6,450</div>
+      </div>
+      <div class="pricing-item">
+        <div class="pricing-name">Portrait Session</div>
+        <div class="pricing-divider"></div>
+        <p class="pricing-desc">One-hour portrait session with an online gallery and full-resolution digital files for personal use and printing. Available for individuals, couples, and families.</p>
+        <div class="pricing-range">$750</div>
+      </div>
+      <div class="pricing-item">
+        <div class="pricing-name">Commercial Work</div>
+        <div class="pricing-divider"></div>
+        <p class="pricing-desc">Available for brand campaigns, editorial, and commercial assignments. Analog film adds character and authenticity to any commercial project.</p>
+        <div class="pricing-range">Contact for Quote</div>
+      </div>
+    </div>
+    <div class="pricing-note reveal" style="text-align:center; margin-top: 48px;">
+      <a href="#contact" class="btn-main" style="font-style:normal;">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="reveal">
+    <div class="section-label" style="color:var(--accent-light);">Get in Touch</div>
+    <h2 class="section-title" style="color:var(--cream);">Let's Talk</h2>
+  </div>
+  <div class="contact-grid reveal">
+    <div class="contact-info">
+      <p>I'm available for weddings, portraits, and commercial work throughout Louisville and beyond. Complete the form and I'll be in touch within 48 hours.</p>
+      <div class="contact-details">
+        <div class="contact-detail-line">
+          <strong>Office</strong>
+          445 Baxter Ave, Suite 125<br>Louisville, KY 40204
+        </div>
+        <div class="contact-detail-line">
+          <strong>Email</strong>
+          <a href="mailto:billy@billygrubbs.com">billy@billygrubbs.com</a>
+        </div>
+        <div class="contact-detail-line">
+          <strong>Phone</strong>
+          Available upon request
+        </div>
+      </div>
+    </div>
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xeepeeda" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-input" name="first_name" placeholder="Jane Doe">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" name="email" placeholder="jane@example.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Type of Session</label>
+        <div class="session-options">
+          <button type="button" class="session-btn" onclick="selectSession(this, 'Wedding Photography')">Wedding</button>
+          <button type="button" class="session-btn" onclick="selectSession(this, 'Portrait Session')">Portrait</button>
+          <button type="button" class="session-btn" onclick="selectSession(this, 'Commercial / Brand')">Commercial</button>
+          <button type="button" class="session-btn" onclick="selectSession(this, 'Other')">Other</button>
+        </div>
+        <input type="hidden" name="session_type" id="sessionTypeInput">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Your Message</label>
+        <textarea class="form-textarea" name="message" placeholder="Tell me about your day, your date, your vision..."></textarea>
+      </div>
+      <button class="form-submit" type="submit">Send Message</button>
+      <p id="formSuccess" style="display:none; font-family:'EB Garamond',serif; font-style:italic; color:var(--accent-light); font-size:1rem; margin-top:8px;">Thank you — I'll be in touch within 48 hours.</p>
+      <p id="formError" style="display:none; font-family:'EB Garamond',serif; font-style:italic; color:#c0392b; font-size:1rem; margin-top:8px;">Something went wrong. Please email me directly at <a href="mailto:billy@billygrubbs.com">billy@billygrubbs.com</a>.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    Billy Grubbs
+    <small>Film Photography Co. · Louisville, KY</small>
+  </div>
+  <ul class="footer-nav">
+    <li><a href="#why-film">Why Film</a></li>
+    <li><a href="#galleries">Galleries</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Billy Grubbs Photography</div>
+</footer>
+
+<script src="js/main.js"></script>
+<script type="module">
+  import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#portfolioTrack',
+    children: 'a',
+    pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js'),
+    padding: { top: 40, bottom: 40, left: 60, right: 60 },
+    bgOpacity: 0.85,
+    initialZoomLevel: (z) => Math.min(1, z.fit),
+    maxZoomLevel: 1,
+    imageClickAction: 'close',
+    tapAction: 'close',
+  });
+  lightbox.init();
+</script>
+</body>
+</html>

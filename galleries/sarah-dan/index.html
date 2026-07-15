@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sarah &amp; Dan — Billy Grubbs Film Photography</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/styles.css">
+<link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+<style>
+  .gallery-page-header {
+    padding: 140px 120px 60px;
+    background: var(--warm-white);
+    border-bottom: 1px solid var(--rule);
+  }
+  .gallery-back {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    transition: color 0.3s;
+  }
+  .gallery-back:hover { color: var(--accent); }
+  .gallery-back::before {
+    content: '←';
+    font-size: 0.9rem;
+    letter-spacing: 0;
+  }
+  .gallery-page-title {
+    font-family: 'Jost', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    color: var(--dark);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .gallery-page-meta {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .photo-grid {
+    padding: 60px 120px 100px;
+    background: var(--warm-white);
+    position: relative;
+  }
+  .photo-grid a {
+    display: block;
+    overflow: hidden;
+    cursor: zoom-in;
+    position: absolute;
+  }
+  .photo-grid a img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+  }
+  .photo-grid a:hover img {
+
+
+  }
+
+  /* PhotoSwipe — light mode */
+  .pswp {
+    --pswp-bg: #ebe6de;
+    --pswp-icon-color: #2a2925;
+    --pswp-icon-color-secondary: #ebe6de;
+  }
+  .pswp__counter {
+    color: var(--mid);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  .pswp__button--zoom { display: none !important; }
+  .pswp__button--close,
+  .pswp__button--arrow--prev,
+  .pswp__button--arrow--next {
+    opacity: 0.35;
+    transition: opacity 0.25s;
+  }
+  .pswp__button--close:hover,
+  .pswp__button--arrow--prev:hover,
+  .pswp__button--arrow--next:hover {
+    opacity: 0.8;
+  }
+  .pswp__button--arrow--prev .pswp__icn { transform: scale(0.5); }
+  .pswp__button--arrow--next .pswp__icn { transform: scale(-0.5, 0.5); }
+
+  .gallery-bottom-back {
+    padding: 40px 120px 0;
+    background: var(--warm-white);
+  }
+
+  @media (max-width: 768px) {
+    .gallery-page-header { padding: 100px 24px 40px; }
+    .gallery-bottom-back { padding: 40px 24px 0; }
+    .photo-grid { padding: 40px 12px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="../../index.html" class="nav-logo-text">
+    <strong>Billy Grubbs</strong>
+    <span>Film Photography Co.</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../index.html#why-film">Why Film</a></li>
+    <li><a href="../../index.html#galleries">Galleries</a></li>
+    <li><a href="../../index.html#about">About</a></li>
+    <li><a href="../../index.html#pricing">Pricing</a></li>
+    <li><a href="../../index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../index.html#why-film" onclick="closeMobileMenu()">Why Film</a>
+  <a href="../../index.html#galleries" onclick="closeMobileMenu()">Galleries</a>
+  <a href="../../index.html#about" onclick="closeMobileMenu()">About</a>
+  <a href="../../index.html#pricing" onclick="closeMobileMenu()">Pricing</a>
+  <a href="../../index.html#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<!-- HEADER -->
+<div class="gallery-page-header">
+  <a href="../../index.html#galleries" class="gallery-back">All Galleries</a>
+  <h1 class="gallery-page-title">Sarah &amp; Dan</h1>
+  <div class="gallery-page-meta">Alms Park · Cincinnati, Ohio</div>
+</div>
+
+<!-- PHOTO GRID -->
+<div class="photo-grid" id="gallery">
+</div>
+
+<div class="gallery-bottom-back"><a href="../../index.html#galleries" class="gallery-back">All Galleries</a></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    Billy Grubbs
+    <small>Film Photography Co. · Louisville, KY</small>
+  </div>
+  <ul class="footer-nav">
+    <li><a href="../../index.html#why-film">Why Film</a></li>
+    <li><a href="../../index.html#galleries">Galleries</a></li>
+    <li><a href="../../index.html#about">About</a></li>
+    <li><a href="../../index.html#pricing">Pricing</a></li>
+    <li><a href="../../index.html#contact">Contact</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Billy Grubbs Photography</div>
+</footer>
+
+<script src="../../js/main.js"></script>
+<script>
+  (function() {
+    var grid = document.getElementById('gallery');
+    var GAP = 16;
+    function layout() {
+      var items = Array.from(grid.querySelectorAll('a'));
+      if (!items.length) return;
+      var cs = getComputedStyle(grid);
+      var contentW = grid.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+      var cols = contentW < 480 ? 1 : 2;
+      var colW = cols === 1 ? contentW : (contentW - GAP) / 2;
+      var pL = parseFloat(cs.paddingLeft);
+      var pT = parseFloat(cs.paddingTop);
+      var pB = parseFloat(cs.paddingBottom);
+      var colY = new Array(cols).fill(0);
+      items.forEach(function(item) {
+        var imgW = parseInt(item.dataset.pswpWidth) || 1;
+        var imgH = parseInt(item.dataset.pswpHeight) || 1;
+        var itemH = Math.round(colW * imgH / imgW);
+        var col = colY.indexOf(Math.min.apply(null, colY));
+        item.style.width = Math.round(colW) + 'px';
+        item.style.left = Math.round(col * (colW + GAP) + pL) + 'px';
+        item.style.top = Math.round(colY[col] + pT) + 'px';
+        colY[col] += itemH + GAP;
+      });
+      grid.style.height = Math.max.apply(null, colY) - GAP + pT + pB + 'px';
+    }
+    fetch('photos.json')
+      .then(function(r) { return r.json(); })
+      .then(function(photos) {
+        photos.forEach(function(p) {
+          var a = document.createElement('a');
+          a.href = p.src;
+          a.dataset.pswpWidth = p.w;
+          a.dataset.pswpHeight = p.h;
+          var img = document.createElement('img');
+          img.src = p.src;
+          img.alt = 'Sarah and Dan';
+          img.loading = 'lazy';
+          a.appendChild(img);
+          grid.appendChild(a);
+        });
+        layout();
+        window.addEventListener('resize', layout);
+      });
+  })();
+</script>
+<script type="module">
+  import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#gallery',
+    children: 'a',
+    pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js'),
+    padding: { top: 40, bottom: 40, left: 60, right: 60 },
+    bgOpacity: 0.85,
+    initialZoomLevel: (z) => Math.min(1, z.fit),
+    maxZoomLevel: 1,
+    imageClickAction: 'close',
+    tapAction: 'close',
+  });
+  lightbox.init();
+</script>
+</body>
+</html>
