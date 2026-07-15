@@ -434,6 +434,8 @@ nav {
   line-height: 1.85;
   color: rgba(245,240,232,0.65);
 }
+.film-reason p a { color: var(--accent-light); text-decoration: none; }
+.film-reason p a:hover { text-decoration: underline; }
 
 /* ABOUT */
 #about {
