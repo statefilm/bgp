@@ -206,9 +206,14 @@
           a.dataset.pswpWidth = p.w;
           a.dataset.pswpHeight = p.h;
           var img = document.createElement('img');
-          img.src = p.src;
-          img.alt = 'Tabitha and Jeremy';
+          img.width = p.w;
+          img.height = p.h;
+          img.decoding = 'async';
           img.loading = 'lazy';
+          img.alt = 'Tabitha and Jeremy';
+          img.style.opacity = '0';
+          img.onload = function() { this.style.opacity = '1'; };
+          img.src = p.src;
           a.appendChild(img);
           grid.appendChild(a);
         });
