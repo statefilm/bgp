@@ -22,6 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&family=EB+Garamond:ital,wght@0,400;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <style>
   .pswp {
     --pswp-bg: #ebe6de;
@@ -312,6 +313,7 @@
         <label class="form-label">Your Message</label>
         <textarea class="form-textarea" name="message" placeholder="Tell me about your day, your date, your vision..."></textarea>
       </div>
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAD2tbtOqFvgtYWY9" data-action="turnstile-spin-v1"></div>
       <button class="form-submit" type="submit">Send Message</button>
       <p id="formSuccess" style="display:none; font-family:'EB Garamond',serif; font-style:italic; color:var(--accent-light); font-size:1rem; margin-top:8px;">Thank you — I'll be in touch within 48 hours.</p>
       <p id="formError" style="display:none; font-family:'EB Garamond',serif; font-style:italic; color:#c0392b; font-size:1rem; margin-top:8px;">Something went wrong. Please email me directly at <a href="mailto:billy@billygrubbs.com">billy@billygrubbs.com</a>.</p>
