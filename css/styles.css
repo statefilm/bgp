@@ -248,6 +248,7 @@ nav {
 .portfolio-track.is-dragging { cursor: grabbing; scroll-behavior: auto; }
 .portfolio-item { flex-shrink: 0; height: 560px; }
 .portfolio-item img { height: 100%; width: auto; display: block; }
+.portfolio-item a { cursor: zoom-in; }
 
 .slider-arrow {
   position: absolute;
